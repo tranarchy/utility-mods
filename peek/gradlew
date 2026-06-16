@@ -66,9 +66,6 @@
 
 # Attempt to set APP_HOME
 
-# Copy the sources
-cp -R ../common/* src/main/java/peek
-
 # Resolve links: $0 may be a link
 app_path=$0
 

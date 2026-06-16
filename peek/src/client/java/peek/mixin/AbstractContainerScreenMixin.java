@@ -63,7 +63,7 @@ public class AbstractContainerScreenMixin {
                     peekInventory.setItem(i, itemsToPeek.get(i));
                 }
 
-                mc.setScreen(new PeekScreen(focusedStack.getHoverName(), peekInventory));
+                mc.gui.setScreen(new PeekScreen(focusedStack.getHoverName(), peekInventory));
             }
 
             int posX = x + (SLOT_WIDTH / 2);

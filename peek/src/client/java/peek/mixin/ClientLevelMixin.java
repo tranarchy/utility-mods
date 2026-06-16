@@ -14,7 +14,7 @@ import java.util.function.BooleanSupplier;
 public class ClientLevelMixin {
     @Inject(at = @At("TAIL"), method = "tick")
     public void tick(BooleanSupplier shouldKeepTicking, CallbackInfo info) {
-        if (Main.mc.screen instanceof ContainerScreen genericContainerScreen) {
+        if (Main.mc.gui.screen() instanceof ContainerScreen genericContainerScreen) {
             if (genericContainerScreen.getTitle().toString().contains("enderchest")) {
                 Main.echestWasOpened = true;
                 Main.enderChestItems.clear();
