@@ -53,10 +53,10 @@ public class AbstractContainerScreenMixin {
                 itemsToPeek = Main.enderChestItems;
             } else {
                 ItemContainerContents shulkerContainer = focusedStack.getComponents().get(DataComponents.CONTAINER);
-                itemsToPeek = shulkerContainer.allItemsCopyStream().toList();
+                itemsToPeek = shulkerContainer.itemCopies().toList();
             }
 
-            if (InputConstants.isKeyDown(mc.getWindow(), InputConstants.KEY_LALT)) {
+            if (InputConstants.isKeyDown(InputConstants.KEY_LALT)) {
                 SimpleContainer peekInventory = new SimpleContainer(9 * 3);
 
                 for (int i = 0; i < itemsToPeek.size(); i++) {
